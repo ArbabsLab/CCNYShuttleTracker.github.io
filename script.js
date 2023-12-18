@@ -292,7 +292,7 @@ node6.strokeStyle = "#172e51";
 node6.lineWidth = 3;
 node6.arc(400, 200, 10, 0, Math.PI * 2, false);
 node6.stroke();
-if (41 > 40.8200) {
+if (NX > 40.8200) {
   node6.fillStyle = colorFill;
   node6.fill();
 }
