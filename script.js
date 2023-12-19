@@ -3,7 +3,7 @@ let coordinateSY;
 let coordinateNX; 
 let coordinateNY; 
 
-
+/*
 function updateCoordinatesAndRedraw() {
   fetch('coordinates.json')
     .then(response => response.json())
@@ -26,7 +26,7 @@ let map = document.getElementById("map");
 map.clearRect(0, 0, map.width, map.height);
 //Set width, height, and color of the map background
 var mapHeight = 500;
-var mapWidth = 500;
+var mapWidth = 650;
 
 map.width = mapWidth;
 map.height = mapHeight;
@@ -61,7 +61,7 @@ node.arc(250, 300, 10, 0, Math.PI * 2, false);
 node.stroke();
 node.fill();
 node.closePath();
-*/
+
 //node 2(NAC)
 node2.beginPath();
 node2.strokeStyle = "#172e51";
@@ -179,17 +179,17 @@ connectNodes.closePath();
 
 
 }
-  
+*/
 let map = document.getElementById("map");
 
 
 //Set width, height, and color of the map background
-var mapHeight = 500;
-var mapWidth = 500;
+var mapHeight = 600;
+var mapWidth = 750;
 
 map.width = mapWidth;
 map.height = mapHeight;
-map.style.background = "#fcf8ee";
+map.style.background = "#f3f8ff";
 
 //initialize nodes
 let node = map.getContext("2d");
@@ -199,34 +199,34 @@ let node4 = map.getContext("2d");
 let node5 = map.getContext("2d");
 let node6 = map.getContext("2d");
 
-var colorFill = "red";
-var colorEmpty = "#89b1b5";
-var NX = coordinateNX;
+var colorFill = "rgb(73, 16, 139)";
+var colorEmpty = "rgb(73, 16, 139, 0.2)";
+var NX = 40.8231;
 var NY = coordinateNY;
 var SX = coordinateSX;
 var SY = coordinateSY;
 
 //node 1(Marshak)
-/*node.beginPath();
+node.beginPath();
 node.strokeStyle = "#172e51";
-if (x == 5) {
+if (NX == 5) {
   node.fillStyle = colorFill;
 }
 else{
   node.fillStyle = colorEmpty;
 }
 node.lineWidth = 3;
-node.arc(250, 300, 10, 0, Math.PI * 2, false);
+node.arc(400, 300, 10, 0, Math.PI * 2, false);
 node.stroke();
 node.fill();
 node.closePath();
-*/
+
 //node 2(NAC)
 node2.beginPath();
 node2.strokeStyle = "#172e51";
 
 node2.lineWidth = 3;
-node2.arc(250, 200, 10, 0, Math.PI * 2, false);
+node2.arc(400, 200, 10, 0, Math.PI * 2, false);
 node2.stroke();
 if (SX > 40.81700 || NX < 40.8200) {
   node2.fillStyle = colorFill;
@@ -242,7 +242,7 @@ node2.closePath();
 node3.beginPath();
 node3.strokeStyle = "#172e51";
 node3.lineWidth = 3;
-node3.arc(100, 350, 10, 0, Math.PI * 2, false);
+node3.arc(700, 300, 10, 0, Math.PI * 2, false);
 node3.stroke();
 if (SY > -73.95200) {
   node3.fillStyle = colorFill;
@@ -258,7 +258,7 @@ node3.closePath();
 node4.beginPath();
 node4.strokeStyle = "#172e51";
 node4.lineWidth = 3;
-node4.arc(400, 350, 10, 0, Math.PI * 2, false);
+node4.arc(50, 300, 10, 0, Math.PI * 2, false);
 node4.stroke();
 if (NY > -73.95200) {
   node4.fillStyle = colorFill;
@@ -274,7 +274,7 @@ node4.closePath();
 node5.beginPath();
 node5.strokeStyle = "#172e51";
 node5.lineWidth = 3;
-node5.arc(100, 200, 10, 0, Math.PI * 2, false);
+node5.arc(75, 500, 10, 0, Math.PI * 2, false);
 node5.stroke();
 if (SX < 40.8170) {
   node5.fillStyle = colorFill;
@@ -290,7 +290,7 @@ node5.closePath();
 node6.beginPath();
 node6.strokeStyle = "#172e51";
 node6.lineWidth = 3;
-node6.arc(400, 200, 10, 0, Math.PI * 2, false);
+node6.arc(650, 500, 10, 0, Math.PI * 2, false);
 node6.stroke();
 if (NX > 40.8200) {
   node6.fillStyle = colorFill;
@@ -309,32 +309,60 @@ connectNodes.beginPath();
 connectNodes.strokeStyle = "#172e51";
 connectNodes.lineWidth = 3;
 
-// Connect node 5 to node 2
-connectNodes.moveTo(240, 200);
-connectNodes.lineTo(110, 200);
 
-// Connect node 5 to node 3
-connectNodes.moveTo(100, 340);
-connectNodes.lineTo(100, 210);
+connectNodes.moveTo(400, 300);
+connectNodes.lineTo(700, 300);
 
-// Connect node 2 to node 6
-connectNodes.moveTo(260, 200);
-connectNodes.lineTo(390, 200);
 
-// Connect node 2 to node 3
-connectNodes.moveTo(250, 210);
-connectNodes.lineTo(110, 350);
+connectNodes.moveTo(500, 500);
+connectNodes.lineTo(700, 500);
 
-// Connect node 6 to node 4
-connectNodes.moveTo(400, 210);
-connectNodes.lineTo(400, 340);
 
-// Connect node 2 to node 4
-connectNodes.moveTo(390, 350);
-connectNodes.lineTo(250, 210);
+connectNodes.moveTo(50, 500);
+connectNodes.lineTo(150, 500);
+
+
+connectNodes.moveTo(50, 300);
+connectNodes.lineTo(50, 500);
+
+
+connectNodes.moveTo(400, 200);
+connectNodes.lineTo(500, 200);
+
+
+connectNodes.moveTo(400, 200);
+connectNodes.lineTo(50, 300);
+
+connectNodes.moveTo(500, 200);
+connectNodes.lineTo(500, 500);
+
+connectNodes.moveTo(150, 500);
+connectNodes.lineTo(150, 400);
+
+connectNodes.moveTo(150, 400);
+connectNodes.lineTo(400, 300);
+
+connectNodes.moveTo(700, 300);
+connectNodes.lineTo(700, 500);
 
 connectNodes.stroke();
 connectNodes.closePath();
 
+let text = map.getContext("2d");
+text.fillStyle = "#49108B";
+text.font = "30px Trebuchet MS";
+text.fillText("SHUTTLE MAP", 325, 50);
 
-setInterval(updateCoordinatesAndRedraw, 60000);
+let text2 = map.getContext("2d");
+text.fillStyle = "red";
+text.font = "30px Trebuchet MS";
+text.fillText("LIVE", 255, 50);
+
+/*
+red flickery LIVE
+change coordinates to fill color of node
+*/
+/*setTimeout(function () { 
+  location.reload();
+}, 6000);
+*/

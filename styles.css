@@ -105,8 +105,21 @@ h2{
     align-items: center;
 }
 
+.footer{
+    background: #7d5cc6;
+    color: #f3f8ff;
+    width: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
 #map {
-    color: #e6bbff;
     border: 3px solid #7d5cc6;
     border-radius: 25px;
+    margin-bottom: 50px;
   }
