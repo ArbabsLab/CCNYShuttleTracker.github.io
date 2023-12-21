@@ -17,13 +17,14 @@ body {
     background: #7d5cc6;
     color: #f3f8ff;
     width: 100%;
-    height: 15vh;
+    height: 120px;
     text-align: center;
     justify-content: center;
     padding-top: 30px;
-    font-size: xx-large;
+    font-size: 40px;
     font-family: 'Times New Roman', sans-serif;
 }
+
 
 .time{
     margin-top: 30px;
